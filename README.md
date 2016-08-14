@@ -47,7 +47,7 @@ nucleus. If any virus manages to touch it, you will lose the game.
 ###### Antibodies
 One way to prevent this is by placing down
 	<img src = "res/antibody.png" alt = "antibody" width = "24" />
-antibodies outside of the cell. Antibodies can't move, but they will slow down any virus that hits them. When a virus hits an antibody,
+antibodies outside of the cell. You can do this by simply clicking/tapping outside of the cell. Antibodies can't move, but they will slow down any virus that hits them. When a virus hits an antibody,
 it will be
 	<img src = "res/virus_tagged.png" alt = "tagged virus" width = "24" />
 tagged. Tagging a virus will consume the antibody, but you have unlimited antibodies, so you just have to make sure you keep placing them down.
