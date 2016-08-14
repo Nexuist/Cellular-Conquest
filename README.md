@@ -1,6 +1,6 @@
 ### Introduction
 
-Cellular Conquest was a game I built for a friend's Connecticut Science Center exhibit. The point of the game was to serve as a very simple demonstration of a cell's defense system, particularly antibodies and proteasomes. It was intended to be played in a touchscreen (read: tablet/laptop) environment by all audiences.
+Cellular Conquest was a game I built for a friend's Connecticut Science Center exhibit from July-August, 2015. The point of the game was to serve as a very simple demonstration of a cell's defense system, particularly antibodies and proteasomes. It was intended to be played in a touchscreen (read: tablet/laptop) environment by all audiences.
 
 > **NOTE:** This is a very barebones tech demo and by no means a final version. It was also my first attempt at using `pygame`, so there are likely lots of things I'm doing wrong. There are plenty of minor bugs, but nothing to render the game unplayable. The code is open sourced for both historical purposes but also to show how a beginner can approach `pygame` and develop something more sophisticated than demo code.
 
@@ -64,8 +64,59 @@ When you lose, the game will tell you how many seconds you lasted, so if you wan
 
 ### Image Resources
 
+The original version of Cellular Conquest used random graphics taken from Google Images. Obviously, those aren't really distributable, so I got my good friend
+	<img src = "http://andrew-abosh.com/logo.svg" alt = "Andrew's logo" width = "24" />
+[Andrew Aabosh](http://andrew-abosh.com/) to recreate them. The images you see in the `res` folder were all made by him. Thanks, Andrew!
+
 ### Next Steps
 
-2016-08-14 07:55:36.759 Python[17778:610990] 07:55:36.758 WARNING:  140: This application, or a library it uses, is using the deprecated Carbon Component Manager for hosting Audio Units. Support for this will be removed in a future release. Also, this makes the host incompatible with version 3 audio units. Please transition to the API's in AudioComponent.h.
+This project was left alone once it fulfilled its purpose as a tech demo. That being said, there are plenty of ideas that could be implemented, and many bugs that can be squashed.
+
+##### Ideas
+
+* Customizable amount of proteasomes
+* Limited antibodies
+* Levels/waves
+* Difficult selector which modifies entity speeds
+* Automatic resolution picker
+* Polished start and end screens
+* Multiple lives
+* DOCUMENTATION! A lot of the code (especially that in `BaseClasses.py`) served more as a framework to extend `pygame` rather than game-specific logic. If documented, it could maybe help out others struggling to implement functionality `pygame` doesn't have.
+
+##### Bugs
+
+* No idea what this is.
+	```
+	2016-08-14 07:55:36.759 Python[17778:610990] 07:55:36.758 WARNING:  140: This application, or a library it uses, is using the deprecated Carbon Component Manager for hosting Audio Units. Support for this will be removed in a future release. Also, this makes the host incompatible with version 3 audio units. Please transition to the API's in AudioComponent.h.
+	```
+
+* Sometimes, when you tell a proteasome to move somewhere, it will get deselected but won't move to the desired location.
+* In addition, proteasomes can sometimes freak out once they reached their location and repeatedly move back-and-forth in place. This is likely caused by the navigation code failing to detect that the proteasome has reached its location.
+* When you close the window, weird graphical artifacts appear in the window for a few milliseconds until the window finally closes. While not a big deal, this might be indicative of a larger problem (such as objects failing to be de-initialized, which can lead to memory overflows).
+* Probably some other stuff I missed.
 
 ### License
+
+```
+MIT License
+
+Copyright (c) 2015 Andi Andreas
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
