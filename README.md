@@ -19,11 +19,16 @@ Cellular Conquest was a game I built for a friend's Connecticut Science Center e
 
 ##### Running
 
-The default game resolution is `1280x800`. Depending on your screen resolution, you may need to change this. You can do so in line 8.
-TODO
-
 In a console:
 > python main.py
+
+The default game resolution is `1280x800`. Depending on your screen resolution, you may need to change this. You can do so like this:
+
+> python main.py 500 800
+
+This will launch the game using a `500x800` resolution.
+
+> **NOTE:** I realize now that resolution is probably the wrong term (should be window size), but that's what I called it when I wrote the code so I'll keep this here for clarity's sake.
 
 ##### Gameplay
 
