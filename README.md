@@ -71,7 +71,7 @@ When you lose, the game will tell you how many seconds you lasted, so if you wan
 
 The original version of Cellular Conquest used random graphics taken from Google Images. Obviously, those aren't really distributable, so I got my good friend
 	<img src = "http://andrew-abosh.com/logo.svg" alt = "Andrew's logo" width = "24" />
-[Andrew Aabosh](http://andrew-abosh.com/) to recreate them. The images you see in the `res` folder were all made by him. Thanks, Andrew!
+[Andrew Abosh](http://andrew-abosh.com/) to recreate them. The images you see in the `res` folder were all made by him. Thanks, Andrew!
 
 ### Next Steps
 
